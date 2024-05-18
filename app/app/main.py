@@ -3,72 +3,15 @@ Created on Sat Mar 27 12:45:25 2021
 
 @author: kluerman
 """
-import re
-import glob
-import os
 import datetime
-
 from flask import Flask, render_template, url_for, request, jsonify, Response, flash, session
 import pandas as pd
 from werkzeug.utils import redirect, secure_filename
-import os
 from itertools import islice, product
 
-import string
-import re
 import numpy as np
-
-
 import re
-import glob
 import os
-
-from flask import Flask, render_template, url_for, request, jsonify, Response, flash, session
-import pandas as pd
-from werkzeug.utils import redirect, secure_filename
-import os
-from itertools import islice, product
-
-import string
-import re
-import numpy as np
-
-
-import pandas as pd
-import numpy as np
-from openpyxl import load_workbook
-
-
-
-from bokeh.io import show
-from bokeh.layouts import Column, row, gridplot, layout
-from bokeh.models import ColumnDataSource, CDSView, BooleanFilter, CustomJSTransform, MultiSelect, CustomJS
-from bokeh.plotting import figure
-from bokeh.transform import transform
-from bokeh.io import curdoc
-from bokeh.plotting import figure, output_file, show, from_networkx, save
-from bokeh.models.graphs import from_networkx
-from bokeh.models import LinearAxis, MultiChoice, Select, IndexFilter, Range1d, Circle, ColumnDataSource, MultiLine, EdgesAndLinkedNodes, NodesAndLinkedEdges, FactorRange, LabelSet, HoverTool
-from bokeh.layouts import Column, layout, gridplot, column
-from bokeh.models.callbacks import CustomJS
-from bokeh.palettes import cividis
-from bokeh.transform import linear_cmap, dodge
-from bokeh.plotting import figure, output_file, show
-from bokeh.models.widgets import Slider,CheckboxGroup,DataTable,MultiSelect,TableColumn, Button, Panel, Tabs, TextInput
-from bokeh.io import curdoc
-from bokeh.embed import file_html, components, server_document
-from bokeh.models import LinearColorMapper, ColorBar, Spinner
-from bokeh.transform import transform
-from bokeh.themes import built_in_themes
-from bokeh.embed import server_document
-from bokeh.server.server import Server
-from bokeh.themes import Theme
-from bokeh.models import ColumnDataSource, CDSView, BooleanFilter, CustomJSTransform, MultiSelect, CustomJS, CustomJSFilter, RangeSlider, Panel, Tabs, LabelSet
-
-import os, glob
-
-import re
-
 import warnings
 warnings.filterwarnings('ignore')
 
