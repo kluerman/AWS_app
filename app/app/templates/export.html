@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width",
+                  initial-scale="1", shrink-to-fit="no">
+		<link rel="shortcut icon" href="#" />
+		<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.dropdown.css.css') }}">
+
+		<link rel="stylesheet" type="text/css" href="http://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.css"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.css"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dropzone.min.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		    <!-- Load Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<!-- Load the plugin bundle. -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/filter_multi_select.css') }}">
+
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		
+		<script src="{{ url_for('static', filename='js/jquery-3.5.1-slim.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		
+		<script text="type/javascript" src="http://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js"></script>
+		<script text="type/javascript" src="http://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js"></script>
+		<script text="type/javascript" src="http://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.js"></script>
+		<script text="type/javascript" src="http://cdn.bokeh.org/bokeh/release/bokeh-api-2.2.3.min.js"></script>
+		<script text="type/javascript" src="http://cdn.bokeh.org/bokeh/release/bokeh-gl-2.2.3.min.js"></script>
+
+
+		<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js"
+        crossorigin="anonymous"></script>
+		<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js"
+				crossorigin="anonymous"></script>
+		<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.js"
+				crossorigin="anonymous"></script>
+
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/mock.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.dropdown.js') }}"></script>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="{{ url_for('static', filename='js/filter-multi-select-bundle.min.js') }}"></script>
+
+
+		
+        <title>Vergleich der Werte aus den Dauerlaufskripten</title>
+    </head>
+	
+
+
+</head>
+
+
+
+
+
+
+<body class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #5daedb;">
+          <a class="navbar-brand" href="#">  <font size="6">Vergleich der Werte aus den Dauerlaufskripten</font></font></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+			  
+            </ul>
+          <a class="navbar-brand" href="#">
+              <img class="pull-right" src="/static/images/logopng.png" alt="">
+          </a>
+          </div>
+        </nav>
+    <br>
+
+
+
+
+ <main role="main" class="container">
+            <div class="d-flex align-items-center p-1 my-1 bg-purple rounded box-shadow "></div>
+
+            <div class="my-3 p-3 bg-white rounded box-shadow border" >
+                <h3 class="border-bottom border-gray pb-0 mb-0">Ergebnis herunterladen</h3>
+
+
+
+<form class="container" method="POST" action="{{url_for('downloadCSV')}}">
+	
+			    <br>
+
+      <div class="row">
+	    <br>
+
+
+        <h4 class="col-12">Datenstände auswählen</h4>
+		  <br>
+	    <br>
+
+      </div>
+      <div class="form-group row">
+	  
+	  
+        <div class="col">
+          <select multiple name="list_of_datenstand_selected[]" id="datenstand" class="filter-multi-select">
+					{% for datenstand_i in list_of_datenstand %}
+					<option value="{{datenstand_i}}" selected="selected" >{{datenstand_i}}  </option>
+					{% endfor %}
+
+          </select>
+        </div>
+      </div>
+
+	    <br>
+
+	  	    <br>
+
+
+
+				<button class="btn text-white" type="submit" style="background-color: #5daedb;">Export</button>
+
+
+    </form>
+		  		  <br>
+		  <br>
+		  
+            </div>
+
+
+				<div class="footer">&copy; TP-S43 / IAV</div>
+
+</main>	 
+ 
+
+						
+	<br>						
+	<br>						
+	<br>						
+	<br>						
+	<br>						
+	<br>
+    <script>
+      // Use the plugin once the DOM has been loaded.
+      $(function () {
+		$("input:radio[messung][disabled=false]:first").attr('checked', true);
+      });
+    </script>
+		
+</body>
+
+
+
+</html>

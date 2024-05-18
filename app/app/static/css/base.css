@@ -1,0 +1,58 @@
+.my-custom-scrollbar {
+position: relative;
+height: 300px;
+overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+display: block;
+}
+
+.navbar-nav > li{
+  padding-left:60px;
+  padding-right:30px;
+}
+
+.button {
+    color: #FFFFFF;
+}
+
+.upload-wrap {
+    position: relative;
+}
+
+.upload-btn {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.infotable {
+    background-color: black;
+}
+
+
+.slick-header-column {
+            background-color: lightblue !important;
+            background-image: none !important;
+            }
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-file input[type=file] {
+		background-color: #5daedb
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
