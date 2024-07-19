@@ -58,7 +58,7 @@
 
 
 		
-        <title>Vergleich der Werte aus den Dauerlaufskripten</title>
+        <title>Hello from App Runner</title>
     </head>
 	
 
@@ -72,7 +72,7 @@
 
 <body class="bg-light">
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #5daedb;">
-          <a class="navbar-brand" href="#">  <font size="6">Vergleich der Werte aus den Dauerlaufskripten</font></font></a>
+          <a class="navbar-brand" href="#">  <font size="6">Hello from App Runner</font></font></a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
 
@@ -85,34 +85,7 @@
         </nav>
     <br>
 
-  <main role="main" class="container">
-		<div class="my-3 p-3 bg-white rounded box-shadow border ">
-                <h3 class="border-bottom border-gray pb-2 mb-0">Messungen hochladen</h3>
-                <div class="media text-muted pt-3">
-						<form method="POST" action="{{url_for('upload')}}" class="dropzone dz-clickable"
-							  id="dropper" enctype="multipart/form-data">
-						  <div class="fallback">
-							<input name="file" type="file" multiple />
-
-							
-						  </div>
-
-						</form>
-						
-						
-
-
-
-
-				</div>
-				<br>
-				<a href="{{ url_for('upload_complete') }}" class="btn text-white" type="submit" style="background-color: #5daedb;" >Auswählen</a>
-
-
-            </div>
-			
-
-		</main>			
+  
 
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/dropzone.min.js') }}"></script>
@@ -135,11 +108,6 @@
             });
         });
     </script>
-
-
-
-
-								{% block criteria %}{% endblock %}
 
 
 
